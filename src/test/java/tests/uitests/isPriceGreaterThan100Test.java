@@ -13,7 +13,7 @@ public class isPriceGreaterThan100Test extends BaseTest {
     private static final Logger LOGGER = LogManager.getLogger(isPriceGreaterThan100Test.class.getName());
 
     @Test
-    public void isPriceGreaterThan100Test() {
+    public void isPriceGreaterThan100Test(){
         LOGGER.info("isPriceGreaterThan100 started");
 
         MainPage mainPage = new MainPage(driver);
@@ -31,13 +31,11 @@ public class isPriceGreaterThan100Test extends BaseTest {
         catalogPage.clickPhonesBtn();
 
         MobilePage mobilePage = new MobilePage(driver);
-        LOGGER.info("Confirm geo position");
-        mobilePage.confirmGeoPosition();
         LOGGER.info("Select Apple phones");
         mobilePage.selectApplePhones();
 
         LOGGER.info("Get the price of the first Apple phone on the list");
-        int actualPrice = mobilePage.getPriceOfTheFirstPhone();
+        double actualPrice = mobilePage.getPriceOfTheFirstPhone();
         Assertions.assertThat(actualPrice).isGreaterThan(100);
         LOGGER.info("The received price is greater than 100 BYN");
     }

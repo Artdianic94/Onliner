@@ -10,15 +10,14 @@ public class CatalogPage extends BasePage {
     }
 
     public void clickElectronicBtn() {
-        clickWhenDisplayed(driver.findElement(Locators.ELECTRONICS_BTN));
+        driver.findElement(Locators.ELECTRONICS_BTN).click();
     }
 
     public void clickMobileBtn() {
-        clickWhenDisplayed(driver.findElement(Locators.MOBILE_BTN));
+        driver.findElement(Locators.MOBILE_BTN).click();
     }
 
     public void clickPhonesBtn() {
-        waitForElementIsDisplayedAndHasText(driver.findElement(Locators.PHONES_BTN), "Смартфоны");
-        clickWhenDisplayed(driver.findElement(Locators.PHONES_BTN));
+        driver.findElement(Locators.PHONES_BTN).click();
     }
 }

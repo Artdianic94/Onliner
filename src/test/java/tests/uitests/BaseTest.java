@@ -34,6 +34,7 @@ public class BaseTest {
         driverManager.setUpDriver();
         driver = driverManager.getDriver();
         driverManager.maximize();
+        driverManager.setTimeout();
         System.getProperty("configuration");
         CatalogPage catalogPage = new CatalogPage(driver);
         LOGGER.info("Attempt to open " + catalogPage.getClass().getName() + " page");
